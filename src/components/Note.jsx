@@ -10,7 +10,7 @@ const Note = ({ note, editNote, deleteNote }) => {
   const [editedCategory, setEditedCategory] = useState(categoria);
 
   const handleSave = () => {
-    editNote(id, editedTitle, editedContent, editedCategory);
+    editNote({ id, titulo: editedTitle, contenido: editedContent, categoria: editedCategory });
     setIsEditing(false);
   };
 
@@ -40,9 +40,9 @@ const Note = ({ note, editNote, deleteNote }) => {
         </div>
       ) : (
         <div className="note-view">
-          <h3>{titulo}</h3>
-          <p>{contenido}</p>
-          <span className="category-label">{categoria}</span>
+          <h3>{editedTitle}</h3>
+          <p>{editedContent}</p>
+          <span className="category-label">{editedCategory}</span>
           <div className="note-buttons">
             <button onClick={() => setIsEditing(true)}>Editar</button>
             <button onClick={() => deleteNote(id)}>Eliminar</button>
