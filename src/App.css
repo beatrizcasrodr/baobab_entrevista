@@ -1,0 +1,213 @@
+/* App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff; /* Un color de fondo suave */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #ff4772;
+  margin-bottom: 1rem;
+}
+
+#main {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ff4772;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px; /* Ajustado para hacer el espacio más grande */
+  border-radius: 10px;
+  border: 2px solid #ff4772;
+  font-size: 1rem;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+  margin-bottom: 10px;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical; /* Permite redimensionar verticalmente solo */
+}
+
+select {
+  height: 45px; /* Ajuste de altura para el select */
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+button.new {
+  background-color: #ff4772;
+  color: #fff;
+}
+
+button.update {
+  background-color: #32cd32;
+  color: #fff;
+}
+
+button.index {
+  background-color: #f0f8ff;
+  color: #ff4772;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Estilo para las notas */
+
+.note-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.note {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.note:hover {
+  transform: scale(1.05);
+}
+
+.note-view h3 {
+  font-size: 1.5rem;
+  color: #ff4772;
+}
+
+.note-view p {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.category-label {
+  background-color: #ff4772;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-right: 10px;
+}
+
+.note-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.note-buttons button {
+  background-color: #32cd32;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.note-buttons button:hover {
+  background-color: #228b22;
+}
+
+/* Formato cuando no hay notas */
+
+.empty-message {
+  font-size: 1.5rem;
+  color: #ff4671;
+  text-align: center;
+}
+/* Ajuste para la categoría y los botones */
+.note-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan si no hay suficiente espacio */
+  gap: 10px;  /* Espacio entre los elementos */
+  margin-top: 10px;
+}
+
+.category-label {
+  background-color: #ff4772;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-right: 10px;  /* Espacio entre la categoría y los botones */
+  white-space: nowrap;  /* Evita que el texto de la categoría se rompa */
+}
+
+.note-buttons {
+  display: flex;
+  gap: 10px;  /* Espacio entre los botones */
+  justify-content: flex-end;  /* Alinea los botones a la derecha */
+  flex-shrink: 0;  /* Evita que los botones se encojan */
+}
+
+.note-buttons button {
+  background-color: #32cd32;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.note-buttons button:hover {
+  background-color: #228b22;
+}
